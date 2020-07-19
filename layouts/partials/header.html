@@ -16,7 +16,7 @@
         {{ range .Site.Menus.main }}
             {{ $text := print .Name | safeHTML }}
             <li>
-                {{ if $page.IsMenuCurrent "main" . }}
+                {{ if eq $page.RelPermalink .URL }}
                     {{ $text }}
                 {{ else }}
                     <a href="{{ .URL }}">
