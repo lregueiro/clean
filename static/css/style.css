@@ -24,6 +24,15 @@ body > header {
     padding-top: 1.5em;
 }
 
+a.styless {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.styless:hover {
+    text-decoration: underline;
+}
+
 body > footer {
     margin-top: 10em;
 }
