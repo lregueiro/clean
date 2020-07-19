@@ -1,0 +1,26 @@
+<header>
+    {{ with .Site.Params.ProjectTitle }}
+    <h1>{{- . -}}</h1>
+    {{ end }}
+    {{ with .Site.Params.ProjectSubtitle }}
+        <p>{{- . -}}</p>
+    {{ end }}
+
+    {{ $page := . }}
+    <nav>
+        <ul>
+        {{ range .Site.Menus.main }}
+            {{ $text := print .Name | safeHTML }}
+            <li>
+                {{ if $page.IsMenuCurrent "main" . }}
+                    {{ $text }}
+                {{ else }}
+                    <a href="{{ .URL }}">
+                        {{ $text }}
+                    </a>
+                {{ end }}
+            </li>
+        {{ end }}
+        </ul>
+    </nav>
+</header>

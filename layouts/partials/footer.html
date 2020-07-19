@@ -1,0 +1,11 @@
+<footer>
+    {{ with .Site.Params.AuthorName }}
+        <p>{{- . -}} &nbsp; {{ now.Format "2006"}}</p>
+    {{ end }}
+    {{ if .Site.Params.IncludeCredits }}
+        <p>
+            Made with: <a target="_blank" href="https://gohugo.io/">Hugo</a> and
+            <a target="_blank" href="https://igoradamenko.github.io/awsm.css/index.html">awsm.css</a>
+        </p>
+    {{ end }}
+</footer>

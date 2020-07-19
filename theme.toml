@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Clean"
+license = "MIT"
+licenselink = "https://github.com/lregueiro/clean/blob/master/LICENSE"
+description = "Minimalist hugo theme for personal page, blog or project site."
+homepage = "https://github.com/lregueiro/clean/"
+tags = ["blog", "clean", "minimalist", "personal"]
+features = ["blog"]
+min_version = "0.41"
+
+[author]
+  name = "Leandro Regueiro"
+  homepage = "https://lregueiro.dev"

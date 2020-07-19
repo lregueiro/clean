@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <h3>{{ .Title }}</h3>
+    {{ $i := 0 }}
+    {{ range .Pages }}
+        {{ if .IsPage  }}
+            {{ partial "page_list_section.html" . }}
+        {{ else }}
+            {{ if gt $i 0 }} | {{ end }}
+            {{ partial "tag_list_section.html" . }}
+            {{ $i = add $i 1 }}
+        {{ end }}
+    {{ end }}
+{{ end }}

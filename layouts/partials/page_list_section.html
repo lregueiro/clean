@@ -1,0 +1,13 @@
+<section>
+    <h5>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h5>
+    {{ partial "metadata.html" . }}
+    <p>
+        {{ if .Site.Params.IncludeMediaOnSummary }}
+            {{ .Summary  }}
+        {{ else }}
+            {{ .Summary | plainify }}
+        {{ end }}
+    </p>
+</section>

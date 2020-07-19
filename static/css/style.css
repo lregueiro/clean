@@ -1,0 +1,38 @@
+html, body {
+    height: 100vh;
+}
+
+hr {
+   background: #d3d3d3;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0 1em 0;
+}
+
+body > header {
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 1.5em;
+}
+
+body > footer {
+    margin-top: 10em;
+}
+
+ main {
+     flex: 1 0 auto;
+     width: 100%;
+}
+
+ footer {
+    flex-shrink: 0;
+}

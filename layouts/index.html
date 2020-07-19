@@ -1,0 +1,24 @@
+{{ define "main" }}
+    <article>
+        <p>
+            The
+            <strong style="color: #FFFFFF;
+                       background-color: #FF0000;
+                       padding: 0 5px 0;
+                       margin: 0 2px 0;">
+                clean theme
+            </strong>
+            is the best choice for your minimalist personal page, blog or project site.
+            Under the hood it's using the
+            <a href="https://igoradamenko.github.io/awsm.css/index.html">awesome css</a>
+            library.
+        </p>
+
+        <hr>
+
+        <h3>Latest posts</h3>
+        {{ range first 2 .Site.RegularPages }}
+            {{ partial "page_list_section.html" . }}
+        {{ end }}
+    </article>
+{{ end }}
