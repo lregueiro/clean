@@ -10,7 +10,9 @@
 
     <link rel="stylesheet" type="text/css" href="/css/awsm.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    {{ with .Site.Params.Favicon }}
-        <link rel="shortcut icon" href="{{ . }}">
+    {{ if .Site.Params.Favicon }}
+        <link rel="shortcut icon" href="{{ .Site.Params.Favicon }}">
+        {{ else }}
+        <link rel="shortcut icon" href="/icons/favicon_ct/favicon.ico">
     {{ end }}
 </head>
