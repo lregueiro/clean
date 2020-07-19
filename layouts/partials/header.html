@@ -1,9 +1,13 @@
 <header>
-    {{ with .Site.Params.ProjectTitle }}
-    <h1>{{- . -}}</h1>
+    {{ if .Site.Params.ProjectTitle }}
+        <h1><a class="styless" href="/">{{- .Site.Params.ProjectTitle -}}</a></h1>
+        {{ else }}
+        <h1><a class="styless" href="/">Project Title</a></h1>
     {{ end }}
-    {{ with .Site.Params.ProjectSubtitle }}
-        <p>{{- . -}}</p>
+    {{ if .Site.Params.ProjectSubtitle }}
+        <p>{{- .Site.Params.ProjectSubtitle -}}</p>
+        {{ else }}
+        <p>Project subtitle: Hugo Clean Theme</p>
     {{ end }}
 
     {{ $page := . }}
