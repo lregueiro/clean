@@ -17,8 +17,12 @@
         <hr>
 
         <h3>Latest posts</h3>
-        {{ range first 2 .Site.RegularPages }}
+        {{$posts := ($.Site.GetPage "section" "post").Pages.ByPublishDate.Reverse}}
+        {{ range first 2 $posts }}
             {{ partial "page_list_section.html" . }}
         {{ end }}
+        <br><br>
+        <a href="/posts">View all posts</a> |
+        <a href="/tags">View tags</a>
     </article>
 {{ end }}
