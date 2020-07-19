@@ -1,6 +1,8 @@
 <footer>
-    {{ with .Site.Params.AuthorName }}
-        <p>{{- . -}} &nbsp; {{ now.Format "2006"}}</p>
+    {{ if .Site.Params.AuthorName }}
+        <p>{{- .Site.Params.AuthorName -}} &nbsp; {{ now.Format "2006"}}</p>
+        {{ else }}
+        <p>Author Name&nbsp; {{ now.Format "2006"}}</p>
     {{ end }}
     {{ if .Site.Params.IncludeCredits }}
         <p>
